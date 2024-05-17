@@ -1,0 +1,31 @@
+{
+  "name": "clipboard",
+  "version": "1.0.0",
+  "description": "A package for pasting text onto system's clipboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testPathPattern=build/tests/",
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahityagaurav4210/book-junction-clipboard.git"
+  },
+  "keywords": [
+    "clipboard",
+    "book-junction",
+    "book-junction-clipboard"
+  ],
+  "author": "Gaurav Sahitya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahityagaurav4210/book-junction-clipboard/issues"
+  },
+  "homepage": "https://github.com/sahityagaurav4210/book-junction-clipboard#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.12",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
+  }
+}

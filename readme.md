@@ -21,34 +21,37 @@ Installation Steps
 **Note:** If you are using Windows 10 or higher, you don't need to install PowerShell separately on your system, as it is already included in the operating system.
 
 ```sh
-# Prerequisites
-
-# Update the list of packages
 sudo apt-get update
+```
 
-# Install pre-requisite packages.
+```sh
 sudo apt-get install -y wget apt-transport-https software-properties-common
-
-# Get the version of Ubuntu
+```
+```sh
 source /etc/os-release
+```
 
-# Download the Microsoft repository keys
+```sh
 wget -q https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb
+```
 
-# Register the Microsoft repository keys
+```sh
 sudo dpkg -i packages-microsoft-prod.deb
+```
 
-# Delete the Microsoft repository keys file
+```sh
 rm packages-microsoft-prod.deb
+```
 
-# Update the list of packages after we added packages.microsoft.com
+```sh
 sudo apt-get update
+```
 
-###################################
-# Install PowerShell
+```sh
 sudo apt-get install -y powershell
+```
 
-# Start PowerShell
+```sh
 pwsh
 ```
 These installation steps are for ubuntu only.

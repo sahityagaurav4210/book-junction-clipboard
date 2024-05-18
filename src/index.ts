@@ -16,10 +16,11 @@ class Clipboards {
 
   private prepareCopyCommand(text: string): string {
     let command: string = "";
+
     if (this.platform === Platform.WINDOWS) {
       command = `powershell Set-Clipboard -Value '"${text}"'`;
     } else if (this.platform === Platform.LINUX) {
-      command = `printf ${text} | xclip -selection clipboard`;
+      command = `pwsh -Command Set-Clipboard -Value '"${text}"'`;
     } else if (this.platform === Platform.MACOX) {
       command = `echo ${text} | pbcopy`;
     } else {
@@ -33,7 +34,7 @@ class Clipboards {
     const command = this.prepareCopyCommand(text);
 
     return new Promise((resolve, reject) => {
-      exec(command, (err, stdout, stderr) => {
+      return exec(command, (err, stdout, stderr) => {
         if (err) reject({ message: err.message, cerr: err.stderr });
         else resolve({ message: stdout, cerr: stderr });
       });

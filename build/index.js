@@ -14,7 +14,7 @@ class Clipboards {
             command = `powershell Set-Clipboard -Value '"${text}"'`;
         }
         else if (this.platform === platform_enum_constants_1.default.LINUX) {
-            command = `printf ${text} | xclip -selection clipboard`;
+            command = `pwsh -Command Set-Clipboard -Value '"${text}"'`;
         }
         else if (this.platform === platform_enum_constants_1.default.MACOX) {
             command = `echo ${text} | pbcopy`;
@@ -27,7 +27,7 @@ class Clipboards {
     copy(text) {
         const command = this.prepareCopyCommand(text);
         return new Promise((resolve, reject) => {
-            (0, child_process_1.exec)(command, (err, stdout, stderr) => {
+            return (0, child_process_1.exec)(command, (err, stdout, stderr) => {
                 if (err)
                     reject({ message: err.message, cerr: err.stderr });
                 else

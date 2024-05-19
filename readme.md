@@ -60,11 +60,11 @@ Usage
 ---
 
 ```javascript
-const Clipboards=require("@book-junction/clipboards");
+const Clipboards=require("@book-junction/clipboards/build");
 
 //Instantiate the class.
 
-const object = new Clipboards();
+const object = new Clipboards.default();
 
 (async () => await object.copy("text to copy")); // Your text is now copied to your clipboard, press Ctrl+V to test.
 ```

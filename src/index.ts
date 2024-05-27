@@ -1,4 +1,5 @@
 import { exec } from "child_process";
+import * as path from "path";
 import Platform from "./constants/platform_enum.constants";
 
 interface ICopy {
@@ -16,13 +17,18 @@ class Clipboards {
 
   private prepareCopyCommand(text: string): string {
     let command: string = "";
+    let formattedText: string = text.replace(/"/g, `\\"`);
+    const scriptPath: string = path.resolve(
+      __dirname,
+      "../build/scripts/copy.ps1"
+    );
 
     if (this.platform === Platform.WINDOWS) {
-      command = `powershell Set-Clipboard -Value '"${text}"'`;
+      command = `powershell -File ${scriptPath} --text "${formattedText}"`;
     } else if (this.platform === Platform.LINUX) {
-      command = `pwsh -Command Set-Clipboard -Value '"${text}"'`;
+      command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
     } else if (this.platform === Platform.MACOX) {
-      command = `echo ${text} | pbcopy`;
+      command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
     } else {
       throw new Error(`Platform ${this.platform} not supported`);
     }

@@ -9,9 +9,9 @@ describe("clipboard.test.js", function () {
         expect(typeof data.cerr === "string" || typeof data.cerr === "undefined").toBe(true);
     });
     it("copy function should return valid values", async function () {
-        const data = await new index_1.default().copy("gaurav sahitya");
+        const data = await new index_1.default().copy(`git commit -m "hello" -m "world"`);
         expect(typeof data).toBe("object");
-        expect(data.message).toBe("");
+        expect(data.message).toBe("Text copied\n");
         expect(data.cerr).toBe("");
     });
 });

@@ -12,10 +12,12 @@ describe("clipboard.test.js", function () {
   });
 
   it("copy function should return valid values", async function () {
-    const data = await new Clipboards().copy("gaurav sahitya");
+    const data = await new Clipboards().copy(
+      `git commit -m "hello" -m "world"`
+    );
 
     expect(typeof data).toBe("object");
-    expect(data.message).toBe("");
+    expect(data.message).toBe("Text copied\n");
     expect(data.cerr).toBe("");
   });
 });

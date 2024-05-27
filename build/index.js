@@ -17,7 +17,7 @@ class Clipboards {
             command = `powershell -File ${scriptPath} --text "${formattedText}"`;
         }
         else if (this.platform === platform_enum_constants_1.default.LINUX) {
-            command = `pwsh -Command Set-Clipboard -Value '"${formattedText}"'`;
+            command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
         }
         else if (this.platform === platform_enum_constants_1.default.MACOX) {
             command = `echo ${formattedText} | pbcopy`;

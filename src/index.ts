@@ -26,9 +26,9 @@ class Clipboards {
     if (this.platform === Platform.WINDOWS) {
       command = `powershell -File ${scriptPath} --text "${formattedText}"`;
     } else if (this.platform === Platform.LINUX) {
-      command = `pwsh -Command Set-Clipboard -Value '"${formattedText}"'`;
+      command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
     } else if (this.platform === Platform.MACOX) {
-      command = `echo ${formattedText} | pbcopy`;
+      command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
     } else {
       throw new Error(`Platform ${this.platform} not supported`);
     }

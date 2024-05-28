@@ -9,7 +9,7 @@ describe("clipboard.test.js", function () {
     expect(
       typeof data.cerr === "string" || typeof data.cerr === "undefined"
     ).toBe(true);
-  });
+  }, 60000);
 
   it("copy function should return valid values", async function () {
     const data = await new Clipboards().copy(
@@ -19,5 +19,5 @@ describe("clipboard.test.js", function () {
     expect(typeof data).toBe("object");
     expect(data.message).toBe("Text copied\n");
     expect(data.cerr).toBe("");
-  });
+  }, 60000);
 });

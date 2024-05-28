@@ -20,7 +20,7 @@ class Clipboards {
             command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
         }
         else if (this.platform === platform_enum_constants_1.default.MACOX) {
-            command = `echo ${formattedText} | pbcopy`;
+            command = `pwsh -File ${scriptPath} --text "${formattedText}"`;
         }
         else {
             throw new Error(`Platform ${this.platform} not supported`);

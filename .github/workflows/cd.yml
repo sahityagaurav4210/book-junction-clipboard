@@ -5,7 +5,7 @@ name: book-junction-clipboard cd pipeline
 
 on:
     push:
-        branches: ['master']
+        branches: ['release']
     pull_request:
         branches: ['release']
         types: ['closed']
@@ -27,7 +27,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Configure npm to use the token
+      - name: Configuring npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc    
       - name: Publishing the package
         env:

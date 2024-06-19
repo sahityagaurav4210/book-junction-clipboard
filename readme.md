@@ -11,14 +11,15 @@ This is a npm package that lets user to copy things onto their system's clipboar
 
 ## <font color="#615EFC"> Package Requirements </font>
 
-| ![Powershell](https://img.icons8.com/fluency/48/powershell.png) | ![NodeJs](https://img.icons8.com/fluency/48/node-js.png) | ![VS Code](https://img.icons8.com/fluency/48/visual-studio.png) |
-| -------- | -------- | -------- |
+1. Powershell
+2. Node.js
+3. Visual Studio Code
 
-<font color="#FF0000"> **Note:** You can use any code editor of your choice.</font>
+<font color="#FF0000"> <b>Note</b> You can use any code editor of your choice.</font>
 
 ## <font color="#615EFC"> Installation Steps </font>
 
-<font color="#FF0000"> **Note:** If you are using Windows 10 or higher, you don't need to install PowerShell separately on your system, as it is already included in the operating system.</font>
+<font color="#FF0000"> <b>Note</b> If you are using Windows 10 or higher, you don't need to install PowerShell separately on your system, as it is already included in the operating system.</font>
 
 ```sh
 sudo apt-get update
@@ -56,7 +57,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-<font color="#FF0000"> **Note:** These installation steps are for ubuntu only.</font>
+<font color="#FF0000"> <b>Note</b> These installation steps are for ubuntu only.</font>
 
 ## <font color="#615EFC"> Usage </font>
 

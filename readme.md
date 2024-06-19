@@ -14,13 +14,11 @@ This is a npm package that lets user to copy things onto their system's clipboar
 | ![Powershell](https://img.icons8.com/fluency/48/powershell.png) | ![NodeJs](https://img.icons8.com/fluency/48/node-js.png) | ![VS Code](https://img.icons8.com/fluency/48/visual-studio.png) |
 | -------- | -------- | -------- |
 
-<font color="#FF0000">**Note:** You can use any code editor of your choice.
-</font>
+<font color="#FF0000"> **Note:** You can use any code editor of your choice.</font>
 
 ## <font color="#615EFC"> Installation Steps </font>
 
-<font color="#FF0000"> **Note:** If you are using Windows 10 or higher, you don't need to install PowerShell separately on your system, as it is already included in the operating system.
-</font>
+<font color="#FF0000"> **Note:** If you are using Windows 10 or higher, you don't need to install PowerShell separately on your system, as it is already included in the operating system.</font>
 
 ```sh
 sudo apt-get update
@@ -72,7 +70,7 @@ const object = new Clipboards.default();
 (async () => await object.copy("text to copy")); // Your text is now copied to your clipboard, press Ctrl+V to test.
 ```
 
-<font color="#FF0000"> **Note:** Copy method can throw errors, so please handle them gracefully. </font>
+<font color="#FF0000"> <b>Note:</b> Copy method can throw errors, so please handle them gracefully. </font>
 
 ## <font color="#615EFC"> Where it can be used </font>
 

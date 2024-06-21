@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Junction | Clipboard</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -13,16 +19,60 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="./public/js/index.js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="./public/style/style.css">
   </head>
 
   <body class="bg-slate-900">
-    <header class="bg-blue-400 p-4 mb-6">
-      <h1 class="text-4xl text-center font-bold text-white">
+    <header class="min-h-20 bg-blue-400 p-4 mb-6 flex items-center justify-center" id="header">
+      <h1 class="text-3xl lg:text-4xl text-center font-bold text-white font-roboto">
         Book Junction Clipboard
       </h1>
     </header>
 
     <main class="container m-auto">
+      <section id="index" class="lg:w-3/4 m-1 p-4 mb-4 bg-[#392467] rounded-md">
+        <h1 class="text-2xl font-bold text-white mb-2">Index</h1>
+        <p class="text-white">
+          This documentation contains the following sections
+        </p>
+
+        <div class="p-4">
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#author">Author</a>
+          </p>
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#about">About</a>
+          </p>
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#requirements">Package Requirements</a>
+          </p>
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#installation">Installation Steps</a>
+          </p>
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#usage">Usage</a>
+          </p>
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#use">Where it can be used?</a>
+          </p>
+          <p class="text-white">
+            <i class="fa-solid fa-hand-point-right"></i>
+            <a href="#download">Where to download?</a>
+          </p>
+        </div>
+      </section>
+
       <section id="author" class="px-2 lg:p-0 mb-4">
         <h1 class="text-2xl font-bold text-[#FFEEA9] mb-2">Author</h1>
         <hr class="mb-1" />
@@ -118,7 +168,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white"> sudo apt-get update </code>
 
@@ -135,7 +185,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white">
               sudo apt-get install -y wget apt-transport-https
@@ -155,7 +205,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white"> source /etc/os-release </code>
 
@@ -172,7 +222,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white">
               wget -q
@@ -192,7 +242,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white">
               sudo dpkg -i packages-microsoft-prod.deb
@@ -211,7 +261,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white"> rm packages-microsoft-prod.deb </code>
 
@@ -228,7 +278,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white"> sudo apt-get update </code>
 
@@ -245,7 +295,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white"> sudo apt-get install -y powershell </code>
 
@@ -262,7 +312,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white"> pwsh </code>
 
@@ -290,7 +340,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white">
               const Clipboards=require("@book-junction/clipboards/build");
@@ -309,7 +359,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white">
               const object = new Clipboards.default();
@@ -328,7 +378,7 @@
         </div>
         <div class="relative">
           <div
-            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md"
+            class="w-full bg-gray-950 text-white p-4 overflow-x-auto mb-4 rounded-md code-snippet"
           >
             <code class="text-white">
               (async () => await object.copy("text to copy"));
@@ -391,5 +441,11 @@
         <img src="./assets/github.png" alt="github" />
       </div>
     </footer>
+
+    <div
+      class="fixed flex justify-center items-center min-w-20 min-h-20 p-6 bg-red-500 right-[10px] bottom-[100px] text-white rounded-full opacity-55 hover:opacity-100 hover:shadow-md hover:shadow-cyan-500/50 hover:scale-110"
+    >
+      <a href="#header"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+    </div>
   </body>
 </html>
